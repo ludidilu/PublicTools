@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="superFunction.SuperFunction"/>
+    <classEntry path="aStar.AStar"/>
+    <classEntry path="aStar.AStarUnit"/>
+    <classEntry path="timeUtil.TimeUtil"/>
+    <classEntry path="superDictionary.SuperDictionary"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
