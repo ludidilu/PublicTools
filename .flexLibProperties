@@ -8,6 +8,8 @@
     <classEntry path="superDictionary.SuperDictionary"/>
     <classEntry path="loader.SuperFileLoader"/>
     <classEntry path="csv.CsvUnit"/>
+    <classEntry path="userData.UserData"/>
+    <classEntry path="userData.UserDataUnit"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

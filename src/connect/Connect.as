@@ -133,13 +133,17 @@ package connect
 					
 					receiveCallBack();
 				}
+				
+				var callBack:Function = method;
+				
+			}else{
+				
+				callBack = handler[unit.methodName];
 			}
 			
 			var arr:Array = new Array;
 			
 			var length:int = _byteArray.readShort();
-			
-			method = handler[unit.methodName];
 			
 			for(i = 0 ; i < length ; i++){
 				
@@ -158,7 +162,7 @@ package connect
 			
 			_byteArray.clear();
 			
-			method.apply(null,arr);
+			callBack.apply(null,arr);
 		}
 		
 		private static function closed(e:Event):void{
@@ -173,12 +177,14 @@ package connect
 			throw new Error("connection error");
 		}
 		
-		public static function sendData(_id:int,arg:Array):void{
+		public static function sendData(_id:int,_callBack:Function,...arg):void{
 			
 			if(sendCallBack != null){
 				
 				sendCallBack();
 			}
+			
+			method = _callBack;
 			
 			var unit:Csv_connect = csv_connect[_id];
 			
